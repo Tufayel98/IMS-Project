@@ -10,18 +10,16 @@ public class Item {
 	private Float price;
 
 	// constructor without id
-	public Item(String itemName, String itemCategory, Float price) {
-		super();
-		this.itemName = itemName;
-		this.price = price;
+	public Item(String itemName,float price) {
+		this.setItemName (itemName);
+		this.setPrice (price);
 	}
 
 	// constructor with id
-	public Item(Long id, String itemName, String itemCategory, Float price) {
-		super();
+	public Item(Long id, String itemName, Float price) {
 		this.id = id;
-		this.itemName = itemName;
-		this.price = price;
+		this.setItemName (itemName);
+		this.setPrice (price);
 	}
 
 	// getters & setters
@@ -52,8 +50,7 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "Item [id=" + id + ", itemName=" + itemName + ",price=" + price
-				+ "]";
+		return "id:" + id + " itemName " + itemName + " price: " + price;
 	}
 
 	@Override
