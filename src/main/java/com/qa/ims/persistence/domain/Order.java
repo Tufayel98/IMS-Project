@@ -1,24 +1,46 @@
 package com.qa.ims.persistence.domain;
 
-import java.util.Objects;
-
 public class Order {
 	
 	private Long id;
-	private long customer_id;
+	private Long customerId;
+	private Long itemId;
+	private Integer quantity;
+	private Float price;
 	
 	
-	// constructor with id
-	public Order(long id, long customer_id) {
-		this.setId (id);
-		this.setCustomer_id (customer_id);
+	
+	// Constructor 1
+	public Order(Long id, Long customerId, Long itemId, Integer quantity, Float price) {
+		super();
+		this.id = id;
+		this.customerId = customerId;
+		this.itemId = itemId;
+		this.quantity = quantity;
+		this.price = price;
+		
+	}
+	
+	// Constructor 2
+	
+	public Order(Long id, Long customerId, Long itemId, Integer quantity) {
+		super();
+		this.id = id;
+		this.customerId = customerId;
+		this.itemId = itemId;
+		this.quantity = quantity;
+	}
+	
+	// Constructor 3
+	public Order(Long customerId, Long itemId, Integer quantity) {
+		super();
+		this.customerId = customerId;
+		this.itemId = itemId;
+		this.quantity = quantity;
 	}
 
-	//constructor without id
-	public Order(long customer_id) {
-		this.setCustomer_id (customer_id);
-	}
-	// getters and setters
+	
+// getters and setters
 	public Long getId() {
 		return id;
 	}
@@ -27,24 +49,55 @@ public class Order {
 		this.id = id;
 	}
 
-	public long getCustomer_id() {
-		return customer_id;
+	public Long getCustomerId() {
+		return customerId;
 	}
 
-	public void setCustomer_id(long customer_id) {
-		this.customer_id = customer_id;
+	public void setCustomerId(Long customerId) {
+		this.customerId = customerId;
 	}
 
+
+	public Long getItemId() {
+		return itemId;
+	}
+
+	public void setItemId(Long itemId) {
+		this.itemId = itemId;
+	}
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
 	
-	
+	public Float getPrice() {
+		return price;
+	}
+
+	public void setPrice(Float price) {
+		this.price = price;
+	}
+
 	@Override
 	public String toString() {
-		return "Order [id=" + id + ", customer_id=" + customer_id + "]";
+		return "Order [id=" + id + ", customerId=" + customerId + ", price=" + price + ", itemId=" + itemId
+				+ ", quantity=" + quantity + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(customer_id, id);
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((customerId == null) ? 0 : customerId.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((itemId == null) ? 0 : itemId.hashCode());
+		result = prime * result + ((quantity == null) ? 0 : quantity.hashCode());
+		result = prime * result + ((price == null) ? 0 : price.hashCode());
+		return result;
 	}
 
 	@Override
@@ -56,7 +109,31 @@ public class Order {
 		if (getClass() != obj.getClass())
 			return false;
 		Order other = (Order) obj;
-		return Objects.equals(customer_id, other.customer_id) && Objects.equals(id, other.id);
+		if (customerId == null) {
+			if (other.customerId != null)
+				return false;
+		} else if (!customerId.equals(other.customerId))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (itemId == null) {
+			if (other.itemId != null)
+				return false;
+		} else if (!itemId.equals(other.itemId))
+			return false;
+		if (quantity == null) {
+			if (other.quantity != null)
+				return false;
+		} else if (!quantity.equals(other.quantity))
+			return false;
+		if (price == null) {
+			if (other.price != null)
+				return false;
+		} else if (!price.equals(other.price))
+			return false;
+		return true;
 	}
-
 }
