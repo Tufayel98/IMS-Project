@@ -4,25 +4,25 @@ import java.util.Objects;
 
 public class Item {
 
-	
+	// Fields
 	private Long id;
 	private String itemName;
 	private Float price;
 
-	// constructor without id
-	public Item(String itemName,float price) {
-		this.setItemName (itemName);
-		this.setPrice (price);
-	}
-
-	// constructor with id
+	// 1. Constructor Generated from Using Fields
 	public Item(Long id, String itemName, Float price) {
 		this.id = id;
 		this.setItemName (itemName);
 		this.setPrice (price);
 	}
 
-	// getters & setters
+	// 2. Constructor Generated from Using Fields
+	public Item(String itemName,float price) {
+		this.setItemName (itemName);
+		this.setPrice (price);
+	}
+	
+	// Generated Getters and Setters
 	public Long getId() {
 		return id;
 	}
@@ -47,12 +47,15 @@ public class Item {
 	public void setPrice(float price) {
 		this.price = price;
 	}
-
+	
+	// Generate to String
+	
 	@Override
 	public String toString() {
 		return "id:" + id + " itemName " + itemName + " price: " + price;
 	}
-
+	
+	// Generate to hashCode
 	@Override
 	public int hashCode() {
 		return Objects.hash(id,itemName, price);

@@ -62,7 +62,7 @@ public class OrderDAO implements Dao<Order>{
 	public Order create(Order orders) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
                 PreparedStatement statement = connection
-                        .prepareStatement("INSERT INTO order_items (customer_id) VALUES (?)");) {
+                        .prepareStatement("INSERT INTO order_items (customer_id, item_id) VALUES (?)");) {
             statement.setLong(1, orders.getCustomerId());
             statement.executeUpdate();
             return readLatest();

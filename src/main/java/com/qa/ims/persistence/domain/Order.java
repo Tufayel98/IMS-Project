@@ -2,6 +2,8 @@ package com.qa.ims.persistence.domain;
 
 public class Order {
 	
+	
+	// Fields
 	private Long id;
 	private Long customerId;
 	private Long itemId;
@@ -10,7 +12,7 @@ public class Order {
 	
 	
 	
-	// Constructor 1
+	// 1. Constructor Generated from Using Fields
 	public Order(Long id, Long customerId, Long itemId, Integer quantity, Float price) {
 		super();
 		this.id = id;
@@ -21,7 +23,7 @@ public class Order {
 		
 	}
 	
-	// Constructor 2
+	// 2. Constructor Generated from Using Fields
 	
 	public Order(Long id, Long customerId, Long itemId, Integer quantity) {
 		super();
@@ -31,7 +33,7 @@ public class Order {
 		this.quantity = quantity;
 	}
 	
-	// Constructor 3
+	// 3. Constructor Generated from Using Fields
 	public Order(Long customerId, Long itemId, Integer quantity) {
 		super();
 		this.customerId = customerId;
@@ -40,7 +42,7 @@ public class Order {
 	}
 
 	
-// getters and setters
+	// Generated Getters and Setters
 	public Long getId() {
 		return id;
 	}
@@ -81,6 +83,8 @@ public class Order {
 	public void setPrice(Float price) {
 		this.price = price;
 	}
+	
+	// Generate to String
 
 	@Override
 	public String toString() {
@@ -88,6 +92,7 @@ public class Order {
 				+ ", quantity=" + quantity + "]";
 	}
 
+	// Generate to hashCode
 	@Override
 	public int hashCode() {
 		final int prime = 31;
