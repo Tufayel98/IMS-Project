@@ -1,38 +1,31 @@
 Coverage: 57%
 # Inventory Management System
+	https://mohammed98.atlassian.net/jira/software/projects/IMSPROJECT/boards/4/backlog
 
 This is my Inventory Management System project. Which showcases the skills I have managed to gain during the last 5 weeks training with QA Academy.
 The language used to write up the program was Java, along with storing and creating the Database in MYSQL which was later connected and transported 
-into Java. The IMS allows users to perform a basic CRUD functionality. The system accepts orders which are made and then gives them an Items ID, Quantitiy and the Total cost.
+into Java. The IMS allows users to perform a basic CRUD functionality. The system accepts orders which are made and then gives them an Items ID, Quantitiy and the Price.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and be able to run on your local machine for development and testing purposes.
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 	Java
-	Git Bash
-	Eclipse 
+	Git
 	Maven
-	Jira
 	MySQL workbench
 
 ### Installing
 
-1. Clone the project using the repo
-2. Install it using the code: cd .... then mvn java -jar
+1. Clone the project using the repo below.
+2. Install the project using the code: cd ims mvn java -jar This will result in an executable .jar file that can be run by the JVM.
 3. Open the project in Eclipse 
 
-Once you have made the CRUD functualities and the application is fully functional you can manipulate the database, by selecting a table to perform operations on. 
-Then select the operations you wish to make. 
-
-	db.url=jdbc:mysql://localhost:3306/inventoryManagementSystems?serverTimezone=UTC
-	db.user=root
-	db.password=Tuffyahmed98
+Once you have opened the application and built it the application can now be manipulated to the database, by selecting a table to perform operations on and then select the operations you wish to make. 
 
 ## Running the tests
 
