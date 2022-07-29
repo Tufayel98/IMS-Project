@@ -14,9 +14,9 @@ These instructions will get you a copy of the project up and be able to run on y
 
 What things you need to install the software and how to install them
 
-	Java
+	Java version 8 
 	Git
-	Maven
+	Maven 3.8.6
 	MySQL workbench
 
 ### Installing
